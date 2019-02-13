@@ -1,0 +1,2 @@
+Para verificar tu correo, visita la siguiente dirección:
+<%= url %>

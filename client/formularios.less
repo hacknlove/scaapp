@@ -1,0 +1,263 @@
+@import "{}/client/colores.import.less";
+label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: @basico;
+  text-transform: uppercase;
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-size: 80%;
+  margin-bottom: 2rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+input, p.campo, textarea {
+  text-align: left;
+  position: relative;
+  display: block;
+  font-family: 'Raleway';
+  border: 0;
+  background: #3d3d3d;
+  color: white;
+  padding: 1ex;
+  font-size: 1rem;
+  border-radius: 4px;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+input[type=checkbox] {
+  pointer-events: none;
+}
+span.password {
+  display: flex;
+  border-radius: 4px;
+  border: none;
+  background-color: #3d3d3d;
+  padding: 0;
+  color: white;
+  margin-bottom: 1em;
+  align-items: center;
+  input {
+    font-size: 1rem;
+    padding: 1ex;
+    flex-grow: 1;
+  }
+  i {
+    margin-right: .5rem;
+    display: block;
+    cursor: pointer;
+    color: fade(@blanco, 50%);
+    transition: color 0.5s;
+  }
+  &:hover {
+    i {
+      color: @blanco;
+    }
+  }
+}
+
+.formulario, .lista {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+
+  p.campo,
+  label,
+  input,
+  textarea,
+  span.password {
+    transition: all 0.2s ease-out;
+  }
+  p.campo.error,
+  label.error,
+  input.error,
+  textarea.error,
+  span.password.error {
+    color: @error;
+    * {
+      color: @error;
+    }
+  }
+  .errores>p{
+    text-transform: none;
+    font-size: 0;
+    color: @error;
+    transition: font-size 0.3s;
+  }
+  p.campo.noValido+.errores>.noValido,
+  textarea.vacio+.errores>.vacio,
+  textarea.noValido+.errores>.noValido,
+  textarea.noEncontrado+.errores>.noEncontrado,
+  label.inputImagen.vacio+.errores>.vacio,
+  label.inputImagen.noValido+.errores>.noValido,
+  label.inputImagen.tamano+.errores>.tamano,
+  span.password.vacio+.errores>.vacio,
+  span.password.noValido+.errores>.noValido,
+  span.password.inesperado+.errores>.inesperado,
+  span.password.noEncontrado+.errores>.noEncontrado,
+  input.vacio+.errores>.vacio,
+  input.noValido+.errores>.noValido,
+  input.inesperado+.errores>.inesperado,
+  input.noEncontrado+.errores>.noEncontrado {
+    font-size: inherit;
+  }
+}
+
+label.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  span {
+    text-transform: none;
+    font-weight: normal;
+  }
+
+  .checkmark {
+    font-size: 1.1rem;
+    transition: all 0.3s, color 0.3s;
+    margin-right: .5rem;
+    color: fade(@basico, 15%);
+  }
+
+  // &:hover input ~ .checkmark {
+  //   text-shadow:
+  //     3px 0 3px fade(white, 50%),
+  //     0px 3px 3px fade(white, 50%),
+  //     -3px 0 3px fade(white, 50%),
+  //     0 -3px 3px fade(white, 50%)
+  //   ;
+  //
+  // }
+  input:checked ~ .checkmark {
+    color: @basico;
+  }
+
+}
+
+form.esperando::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: fade(white, 75%);
+  z-index: 10;
+}
+form.esperando::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: fade(white, 75%);
+  z-index: 10;
+}
+
+form.esperando::after {
+  cursor: wait;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f252";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+  color: mix(white, @basico, 40%);
+  z-index: 11;
+}
+
+form.clasico {
+  box-sizing: border-box;
+  background: white;
+  position: relative;
+  max-width: 500px;
+  min-width: 300px;
+  @media (max-width: 500px) {
+    max-width: 100%;
+  }
+  padding: 70px 24px;
+  justify-content: center;
+  justify-content: safe center;
+  border: 2px solid @basico;
+  border-radius: 8px;
+  input {
+    margin-bottom: 10px;
+  }
+  label {
+    margin-bottom: 0;
+  }
+  p {
+    hyphens: auto;
+  }
+  hr {
+    margin: 20px auto;
+    width: 80%;
+  }
+  .botonera {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    :first-child {
+      margin-left: 0;
+    }
+    :last-child {
+      margin-right: 0;
+    }
+  }
+  .cabecero {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: auto;
+    background: @basico;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid @basico;
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    text-transform: uppercase;
+    font-family: 'Raleway';
+    font-weight: bold;
+    padding: 8px;
+    i.fas.fa-times {
+      cursor: pointer;
+    }
+  }
+}

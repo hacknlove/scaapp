@@ -1,0 +1,25 @@
+<template name="seleccionarVideo">
+  <form class="ventana fade clasico">
+    <div class="cabecero">
+      {{_ 'Seleccionar cámara'}}
+      <i class="fas fa-times cerrar"></i>
+    </div>
+    {{> selector name="video" valores=camaras value=(configuracion.video)}}
+    <div class="botonera">
+      <button class="cerrar">{{_ 'Aceptar'}}</button>
+    </div>
+  </form>
+</template>
+<template name="probarVideo">
+  <form class="ventana fade clasico">
+    <div class="cabecero">
+      {{_ 'Probar video'}}
+      <i class="fas fa-times cerrar"></i>
+    </div>
+    <video class="verificarVideo" controls="true" autoplay="true" id="verificarVideo"></video>
+    <div class="botonera">
+      <button class="cerrar js-recargar"><i class="fas fa-times"></i> {{_ 'Cancelar'}}</button>
+      <button class="cerrar js-aceptar"><i class="fas fa-check"></i> {{_ 'Aceptar'}}</button>
+    </div>
+  </form>
+</template>

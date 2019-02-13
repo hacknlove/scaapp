@@ -1,0 +1,50 @@
+@import "{}/client/colores.import.less";
+
+#botoneraPortada {
+  transition: opacity .3s ease-out, right .3s;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  &>div {
+    position: relative;
+    left: 0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    transition:
+      left .3s ease-out,
+      transform .3s ease-out,
+      background .2s ease-out,
+      color .2s ease-out;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid @basico;
+    width: 200px;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 125%;
+    text-align: center;
+    border-radius: 50px;
+    background: @basico;
+    color: white;
+    &:hover{
+      background: lighten(@basico, 10%);
+    }
+    &:active {
+      border-color: lighten(@basico, 10%);
+    }
+    &.activo {
+      left: -30px;
+    }
+  }
+  &.oculto {
+    pointer-events: none;
+    right: -225px;
+  }
+}

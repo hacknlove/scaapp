@@ -1,0 +1,5 @@
+<template name="idiomas">
+  <div class="languages">
+    {{#each lang in languages}}<div class="cambiarIdioma {{idiomaActivo lang}}" data-lang="{{lang}}">{{lang}}</div>{{/each}}
+  </div>
+</template>

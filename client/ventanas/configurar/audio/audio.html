@@ -1,0 +1,29 @@
+<template name="seleccionarAudio">
+  <div class="step">
+    <div class="principal sinBotonera">
+      <form class="clasico">
+        <div class="cabecero">
+          {{_ 'Seleccionar micrófono'}}
+          <i class="fas fa-times cerrar"></i>
+        </div>
+        {{> selector name="audio" valores=microfonos value=(configuracion.audio)}}
+        <div class="botonera">
+          <button class="cerrar">{{_ 'Aceptar'}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>
+<template name="probarAudio">
+  <form class="clasico">
+    <div class="cabecero">
+      {{_ 'Probar micrófono'}}
+      <i class="fas fa-times cerrar"></i>
+    </div>
+    <audio class="verificarAudio" controls="true" autoplay="true" id="verificarVideo"></audio>
+    <div class="botonera">
+      <button class="cerrar js-recargar"><i class="fas fa-times"></i> {{_ 'Cancelar'}}</button>
+      <button class="cerrar js-aceptar"><i class="fas fa-check"></i> {{_ 'Aceptar'}}</button>
+    </div>
+  </form>
+</template>

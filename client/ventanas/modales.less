@@ -1,0 +1,67 @@
+@import "{}/client/colores.import.less";
+
+#ventanas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: safe center;
+  align-items: safe center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  &>*{
+    position: absolute;
+  }
+}
+
+.ventana {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+}
+
+.fade {
+  z-index: 200;
+  &.cerrar {
+    cursor: pointer;
+  }
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease-out;
+}
+
+
+.fade.visible {
+  opacity: 1;
+  pointer-events: auto;
+  &>* {
+    transform: scale(1);
+  }
+}
+
+.pantallaCompleta {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  justify-content: safe center;
+  align-items: center;
+  align-items: safe center;
+}
+.modal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  justify-content: safe center;
+  align-items: center;
+  align-items: safe center;
+}
+
+#ventanas>.error {
+  z-index: 210;
+}

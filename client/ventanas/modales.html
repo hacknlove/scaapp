@@ -1,0 +1,10 @@
+<template name="ventanas">
+  <div id="ventanas">
+    {{# each m in ventanas}}
+      {{> modal m}}
+    {{/each}}
+  </div>
+</template>
+<template name="modal">
+  {{> Template.dynamic template=template data=this}}
+</template>

@@ -1,0 +1,69 @@
+<template name="ayuda1">
+  <form class="ventana fade clasico">
+    <div class="cabecero">
+      {{_ '¿Para qué sirve scaapp?'}}
+      <i class="fas fa-times cerrar"></i>
+    </div>
+    <p>{{_ 'Con scaapp.com puedes realizar una grabación de video+gps certificada con blockchain de modo que constituya una prueba irrefutable'}}</p>
+    <div class="botonera">
+      <button type="button" class="cerrar">{{_ 'Salir'}}</button>
+      <button type="button" class="cerrar abrirModal" data-modal="ayuda2">{{_ 'Siguiente'}}</button>
+    </div>
+  </form>
+</template>
+<template name="ayuda2">
+  <form class="ventana fade clasico">
+    <div class="cabecero">
+      {{_ '¿Por qué blockchain?'}}
+      <i class="fas fa-times cerrar"></i>
+    </div>
+    <p>{{{_ 'Blockchain garantiza que la grabación ha sido creada antes de la inclusión del bloque en la cadena, y que la grabación no ha sido alterada desde la inclusión del bloque en la cadena.'}}}</p>
+    <p>{{{_ 'Se usa una cadena privada de máxima seguridad.'}}}</p>
+    <div class="botonera">
+      <button type="button" class="cerrar abrirModal" data-modal="ayuda1">{{_ 'Anterior'}}</button>
+      <button type="button" class="cerrar abrirModal" data-modal="ayuda3">{{_ 'Siguiente'}}</button>
+    </div>
+  </form>
+</template>
+<template name="ayuda3">
+  <form class="ventana fade clasico">
+    <div class="cabecero">
+      {{_ '¿Dónde se guardan las grabaciones?'}}
+      <i class="fas fa-times cerrar"></i>
+    </div>
+    <p>{{_ 'Todos los archivos se guardan en la carpeta scaapp de tu google drive.'}}</p>
+    <p>{{_ 'Puedes copiarlos o moverlos a otro sitio, pero en ningún caso los renombres.'}}</p>
+    <div class="botonera">
+      <button type="button" class="cerrar abrirModal" data-modal="ayuda2">{{_ 'Anterior'}}</button>
+      <button type="button" class="cerrar abrirModal" data-modal="ayuda4">{{_ 'Siguiente'}}</button>
+    </div>
+  </form>
+</template>
+<template name="ayuda4">
+  <form class="ventana fade clasico">
+    <div class="cabecero">
+      {{_ '¿Cómo es posible que sea gratuito?'}}
+      <i class="fas fa-times cerrar"></i>
+    </div>
+
+    <p>{{_ 'Gracias a la colaboración desinteresada de muchos voluntarios que creen en la necesidad de poder realizar una grabación irrefutable, scaapp está diponible de forma completamente gratuita.'}}</p>
+    <div class="botonera">
+      <button type="button" class="cerrar abrirModal" data-modal="ayuda3">{{_ 'Anterior'}}</button>
+      <button type="button" class="cerrar abrirModal" data-modal="ayuda5">{{_ 'Siguiente'}}</button>
+    </div>
+  </form>
+</template>
+<template name="ayuda5">
+  <form class="ventana fade clasico">
+    <div class="cabecero">
+      {{_ '¿Cómo puedes ayudar?'}}
+      <i class="fas fa-times cerrar"></i>
+    </div>
+    <p>{{_ 'Puedes colaborar económicamente a través de patreon.'}}</p>
+    <p><a target="_blank" href="https://www.patreon.com/scaapp_video_gps_blockchain">https://www.patreon.com/scaapp_video_gps_blockchain</a></p>
+    <div class="botonera">
+      <button type="button" class="cerrar abrirModal" data-modal="ayuda4">{{_ 'Anterior'}}</button>
+      <button type="button" class="cerrar" data-modal="salir">{{_ 'Salir'}}</button>
+    </div>
+  </form>
+</template>

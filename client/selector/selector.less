@@ -1,0 +1,50 @@
+@import "{}/client/colores.import.less";
+
+div.selector {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: transparent;
+  box-shadow: none;
+  button {
+    border: 1px solid @basico;
+    color: @basico;
+    background: white;
+    position: relative;
+    &::before {
+      transition: background 0.2s ease-out, color 0.2s ease-out;
+      content: '\f00c';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 1rem;
+      background: fade(white, 0%);
+      color: fade(white, 0%);
+    }
+  }
+  button.invertido {
+    color: white;
+    background: @basico;
+    position: relative;
+    &:hover {
+      background: lighten(@basico, 10%);
+      &::before {
+        background: fade(lighten(@basico, 10%), 75%);
+      }
+    }
+    &:active {
+      background: @basico;
+    }
+    &::before {
+      transition: background 0.2s ease-out, color 0.2s ease-out;
+      content: '\f00c';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 1rem;
+      color: fade(white, 100%);
+      background: fade(@basico, 50%);
+    }
+  }
+}

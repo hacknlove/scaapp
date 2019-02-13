@@ -1,0 +1,23 @@
+{
+  "name": "camaraoculta",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.2",
+    "aws-sdk": "^2.346.0",
+    "bcrypt": "^3.0.2",
+    "bencode": "^2.0.0",
+    "js-base64": "^2.5.0",
+    "meteor-node-stubs": "^0.3.2",
+    "moment": "^2.22.2",
+    "papaparse": "^4.6.3",
+    "sha3": "^2.0.0",
+    "simple-peer": "^9.1.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
+}

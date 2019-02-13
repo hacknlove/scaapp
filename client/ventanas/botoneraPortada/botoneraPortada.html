@@ -1,0 +1,9 @@
+<template name="botoneraPortada">
+  <div id="botoneraPortada" class="fade">
+    <div class="abrirModal {{activo 'ayuda1,ayuda2,ayuda3,ayuda4,ayuda5'}}" data-modal="ayuda1"><i class="fas fa-question"></i>{{_ 'Ayuda'}}</div>
+    <div class="abrirModal {{activo 'menuConfigurar'}}" data-modal="menuConfigurar"><i class="fas fa-cogs"></i>{{_ 'Opciones'}}</div>
+    <div class="abrirModal {{activo 'grabar,grabando'}}" data-modal="grabando"><i class="fas fa-video"></i> {{_ 'Grabar ya'}}</div>
+    <div class="abrirModal {{activo 'temporizador,grabando'}}" data-modal="temporizador"><i class="fas fa-hourglass-start"></i> {{_ 'Temporizador'}}</div>
+    <div class="js-patreon"><i class="fas fa-hand-holding-heart"></i> {{_ 'Colaborar'}}</div>
+  </div>
+</template>

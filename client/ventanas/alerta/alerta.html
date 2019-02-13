@@ -1,0 +1,16 @@
+<template name="alerta">
+  <form class="ventana fade clasico {{clase}}">
+    <div class="cabecero">
+      {{titulo}}
+      {{#unless noCerrar}}
+        <i class="fas fa-times cerrar"></i>
+      {{/unless}}
+    </div>
+    <div>{{{contenido}}}</div>
+    {{#unless noCerrar}}
+      <div class="botonera">
+        <button type="button" class="cerrar">Aceptar</button>
+      </div>
+    {{/unless}}
+  </form>
+</template>

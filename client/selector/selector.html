@@ -1,0 +1,8 @@
+<template name="selector">
+  <div class="selector">
+    <input type="hidden" name="{{name}}" value="{{value}}">
+    {{#each valor in valores}}
+      <button data-value="{{valor.valor}}" class="{{actual valor.valor}}">{{_ valor.etiqueta}}</button>
+    {{/each}}
+  </div>
+</template>

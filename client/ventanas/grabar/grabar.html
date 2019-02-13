@@ -1,0 +1,54 @@
+<template name="grabar">
+  <form class="clasico">
+    <div class="cabecero">
+      {{_ 'Grabar'}}
+      <i class="fas fa-times cerrar"></i>
+    </div>
+    <p>{{_ 'La grabación comenzará en:'}}</p>
+    <h2 class="cuenta atrás">{{segundos}}s</h2>
+    <div class="botonera">
+      <button type="button" class="js-disfrazar">{{_ 'Disfrazar'}}</button>
+      <button class="js-empezar">{{_ 'Grabar'}}</button>
+    </div>
+  </form>
+</template>
+
+<template name="grabando">
+  <div class="step">
+    <div class="principal sinBotonera">
+      <form class="clasico">
+        <div class="cabecero">
+          {{_ 'Grabando'}}
+          <i class="fas fa-times step" data-step="portada"></i>
+        </div>
+        <label>{{_ 'Minutos Grabados'}}</label>
+        <input value="{{status.minutosGrabados}}">
+        <label>{{_ 'Minutos Subidos'}}</label>
+        <input value="{{status.minutosSubidos}}">
+        <label>{{_ 'Posiciones GPS guardadas'}}</label>
+        <input value="{{status.posicionesGPSguardadas}}">
+        <div class="botonera">
+          <button type="button" class="js-disfrazar">{{_ 'Disfrazar'}}</button>
+          <button type="button" class="js-terminar">{{_ 'Terminar'}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>
+
+<template name="temporizador">
+  <form class="clasico">
+    <div class="cabecero">
+      {{_ 'Temporizador'}}
+      <i class="fas fa-times cerrar"></i>
+    </div>
+    <label>{{_ 'Minutos para iniciar la grabación:'}}</label>
+    <input name="esperar" type="number" value="{{configuracion.esperar}}">
+    <label>{{_ 'Duración de la grabación en minutos:'}}</label>
+    <input name="duracion" type="number" value="{{configuracion.duracion}}">
+    <div class="botonera">
+      <button class="cerrar">{{_ 'Cancelar'}}</button>
+      <button class="js-establecer">{{_ 'Aceptar'}}</button>
+    </div>
+  </form>
+</template>

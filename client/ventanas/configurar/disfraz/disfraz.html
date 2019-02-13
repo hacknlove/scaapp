@@ -1,0 +1,19 @@
+<template name="seleccionarDisfraz">
+  <form class="ventana fade clasico">
+    <div class="cabecero">
+      {{_ 'Disfraz'}}
+      <i class="fas fa-times cerrar anterior"></i>
+    </div>
+    <input name="disfraz" placeholder="{{_ 'url de la página web a imitar'}}" data-validacion="vacio">
+    <div class="errores">
+      <p class="vacio">
+        {{_ 'Escribe una url'}}
+      </p>
+    </div>
+    <label class="checkbox"><input type="checkbox" name="disfrazarse" checked="{{configuracion.disfrazarse}}"><i class="fas fa-check checkmark"></i><span> {{_ 'Disfrazar interfaz mientras se graba'}}</span></label>
+    <div class="botonera">
+      <button type="button"  class="secundario cerrar">{{_ 'Cancelar'}}</button>
+      <button>{{_ 'Aceptar'}}</button>
+    </div>
+  </form>
+</template>

@@ -1,0 +1,2 @@
+Para verificar tu correo y establecer tu contraseña, visita la siguiente dirección:
+<%= url %>

@@ -1,0 +1,32 @@
+<template name="entrando">
+  <div id="entrando">
+    <div>
+      <span>●</span><span>●</span><span>●</span>
+    </div>
+  </div>
+</template>
+
+<template name="login">
+  <form class="ventana fade login clasico">
+    <div class="cabecero">
+      {{_ 'Entra con google drive'}}
+    </div>
+    <ol>
+      <li>
+        {{_ 'scaapp no guarda ni comparte con nadie ningún ningún dato del usuario.'}}
+      </li>
+      <li>
+        {{_ 'El usuario es responsable del uso que haga de scaapp.'}}
+      </li>
+      <li>
+        {{_ 'El usuario se compromete a respetar la legislación.'}}
+      </li>
+      <li>
+        <a target="_blank" href="/static/condiciones.pdf">{{_ 'El usuario acepta las condiciones.'}}</a>.
+      </li>
+    </ol>
+    <div class="botonera">
+      <button>{{_ 'Aceptar y Entrar'}}</button>
+    </div>
+  </form>
+</template>

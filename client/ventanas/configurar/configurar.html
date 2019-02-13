@@ -1,0 +1,24 @@
+<template name="menuConfigurar">
+  <form class="ventana fade login clasico">
+    <div class="cabecero">
+      {{_ 'Opciones'}}
+      <i class="fas fa-times cerrar"></i>
+    </div>
+    <button type="button" class="abrirModal cerrar" data-modal="seleccionarVideo">
+      {{_ 'Video'}}
+    </button>
+    <button type="button" class="abrirModal cerrar" data-modal="seleccionarAudio">
+      {{_ 'Audio'}}
+    </button>
+    <button type="button" class="abrirModal cerrar" data-modal="seleccionarDisfraz">
+      {{_ 'Disfraz'}}
+    </button>
+    <button type="button" class="cerrar js-salir">
+      {{_ 'Cerrar sessión'}}
+    </button>
+
+    <div class="botonera">
+      <button type="button" class="cerrar">{{_ 'Aceptar'}}</button>
+    </div>
+  </form>
+</template>

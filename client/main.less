@@ -1,0 +1,173 @@
+@import "{}/client/colores.import.less";
+body {
+  background: black;
+}
+a {
+  cursor: pointer;
+}
+
+.botonera, .selector {
+  width: 100%;
+  background: rgba(0,0,0,.1);
+  padding: 1rem 0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+
+  text-align: center;
+}
+button {
+  vertical-align: middle;
+  &>*{
+    vertical-align: middle;
+  }
+  margin: 0.5rem 0;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5rem;
+  color: @basico;
+  text-transform: uppercase;
+  font-family: 'Raleway';
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-out, color 0.2s ease-out;
+  color: white;
+  background: @basico;
+  &:hover {
+    background: lighten(@basico, 10%);
+  }
+  &:active {
+    background: @basico;
+  }
+}
+.principal .botonera {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+.botonera {
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  &>* {
+    margin: 0 .5rem;
+    flex-grow: 1;
+  }
+}
+body {
+  overflow-x: hidden;
+  font-family: 'Raleway';
+  color: @basico;
+  font-weight: bold;
+}
+.contenedor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.pasos {
+  display: flex;
+  &>div {
+    position: relative;
+    overflow: visible;
+    width: 100vw;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    .principal {
+      padding: 0;
+      position: relative;
+      justify-content: safe center;
+      align-items: safe center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      max-height: ~"calc(100vh - 76px)";
+      &.sinBotonera {
+        max-height: 100vh;
+      }
+      overflow: visible;
+      p {
+        hyphens: auto;
+      }
+      &>.texto {
+        position: relative;
+        &>i.fas.fa-times {
+          display: block;
+          width: 15px;
+          height: 15px;
+          line-height: 15px;
+          text-align: center;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          cursor: pointer;
+          padding: 3px 2px 3px 4px;
+          border: 2px solid transparent;
+          transition: border-color .3s ease-out;
+          border-radius: 100%;
+          &:hover {
+            border: 2px solid @basico;
+          }
+        }
+      }
+    }
+  }
+}
+.texto {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 480px;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  background: fade(white, 85%);
+  p {
+    line-height: 150%;
+  }
+  &.full {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    right: 2rem;
+    max-width: 640px;
+    bottom: 0;
+    label, textarea {
+      flex-grow: 1;
+    }
+  }
+}
+
+.loader {
+  pointer-events: none;
+  position: absolute;
+  transition: all .3s ease-out;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &.activo {
+    opacity: 1;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, .2);
+  img {
+    margin: 20px;
+    filter: blur(1px) drop-shadow(0 0 10px @basico);
+  }
+}
+
+video {
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+
+.pasos > div iframe.principal {
+  border: 0;
+  max-height: none;
+}
